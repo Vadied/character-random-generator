@@ -95,7 +95,15 @@ export const titles = [
   "la Dottoressa",
   "Fuoricorso",
   "Content Creator",
-  "TikToker"
+  "TikToker",
+  "ArcoBalengo",
+  "Arcontebaleno",
+  "Gay delle Steppe",
+  "Terrore dei Salotti",
+  "Drago dei Contest",
+  "Sindaco di Lanzo Torinese",
+  "GranMaresciallo di Lgbilterra",
+  "Re della Sauna",
 ];
 
 export const preferences = [
@@ -112,17 +120,17 @@ export const preferences = [
 ];
 
 export const races = [
-  "Human",
-  "Dragonborn",
-  "Tiefling",
-  "Dwarf",
-  "Elf",
-  "Half-elf",
-  "Half-Orc",
-  "Half-dwarf",
-  "Aasimar",
-  "Gnome",
-  "Halfling",
-  "Goblin",
-  "Changeling",
+  { label: "Human" },
+  { label: "Dragonborn" },
+  { label: "Tiefling" },
+  { label: "Dwarf" },
+  { label: "Elf" },
+  { label: "Half-elf" },
+  { label: "Half-Orc" },
+  { label: "Half-Dwarf" },
+  { label: "Aasimar" },
+  { label: "Gnome" },
+  { label: "Halfling" },
+  { label: "Goblin" },
+  { label: "Changeling" },
 ];

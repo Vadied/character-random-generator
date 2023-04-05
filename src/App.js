@@ -1,4 +1,5 @@
 import Extractor from './components/extractor';
+import "./App.css"
 
 function App() {
   return (

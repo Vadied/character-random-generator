@@ -4,7 +4,7 @@ import "./style.css";
 const Button = ({ handleClick, tooltip = "", children }) => {
   return (
     <Tooltip title={tooltip}>
-      <div className="ext-button" onClick={handleClick}>
+      <div className="button" onClick={handleClick}>
         {children}
       </div>
     </Tooltip>

@@ -21,27 +21,23 @@ const Extractor = () => {
 
   return (
     <div className="extractor">
-      <Button
-        handleClick={handleClick}
-        tooltip="Clicca per generare il personaggio"
-      >
-        Genera il tuo personaggio!
-      </Button>
       {char.name && (
-        <div>
-          <div>
-            <div className="name-label">Nome:</div>
-            <div className="name">{char.name}</div>
-          </div>
-          <div>
-            <div className="name-label">Classe:</div>
-            <div className="name">{char.classChar}</div>
-          </div>
-          <div>
-            <div className="name-label">Specie:</div>
-            <div className="name">{char.race}</div>
-          </div>
+        <div className="char-section">
+          <div className="label">Nome:</div>
+          <div className="text">{char.name}</div>
+          <div className="label">Classe:</div>
+          <div className="text">{char.classChar}</div>
+          <div className="label">Specie:</div>
+          <div className="text">{char.race.label}</div>
         </div>
+      )}
+      {!char.name && (
+        <Button
+          handleClick={handleClick}
+          tooltip="Clicca per generare il personaggio"
+        >
+          Genera il tuo personaggio!
+        </Button>
       )}
     </div>
   );

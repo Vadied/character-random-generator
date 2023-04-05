@@ -1,6 +1,13 @@
-.ext-button {
-  height: 100%;
-  text-align: center;
+.button {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  padding: 8px 16px;
+  gap: 4px;
+  background: #898d9c;
+  border-radius: 10px;
+  width: 91px;
+  height: 40px;
+  cursor: pointer;
 }
