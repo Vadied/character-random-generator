@@ -1,0 +1,21 @@
+.extractor {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(41, 0, 104, 0.351);
+  border-radius: 10px;
+  background-color: rgb(245, 250, 255);
+}
+
+.extractor .name-label {
+  font-weight: 600;
+}
+
+.extractor .name {
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
