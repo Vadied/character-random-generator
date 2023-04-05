@@ -14,7 +14,10 @@ const useCharacter = () => {
     return content[Math.floor(Math.random() * content.length)];
   };
 
-  const generateName = () => {
+  const generateName = (defaultName) => {
+    if (defaultName)
+      return defaultName.charAt(0).toUpperCase() + defaultName.slice(1);
+
     const prefix = chooseRandom(prefixes);
     const suffix = chooseRandom(suffixes);
     return `${prefix}${suffix}`;
@@ -29,8 +32,8 @@ const useCharacter = () => {
     return { race: race.label, image };
   };
 
-  const generateCharacter = () => {
-    const name = generateName();
+  const generateCharacter = (defaultName = "") => {
+    const name = generateName(defaultName.toLowerCase());
     const title = generateTitle();
     const classChar = generateClass();
     const preference = generatePreference();
