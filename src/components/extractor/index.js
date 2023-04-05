@@ -27,7 +27,6 @@ const Extractor = () => {
             className="image"
             style={{ backgroundImage: `url(/images/${char.image})` }}
           ></div>
-          {char.image}
           <div className="char-section">
             <div className="label">Nome:</div>
             <div className="text">
