@@ -22,13 +22,23 @@ const Extractor = () => {
   return (
     <div className="extractor">
       {char.name && (
-        <div className="char-section">
-          <div className="label">Nome:</div>
-          <div className="text">{char.name}</div>
-          <div className="label">Classe:</div>
-          <div className="text">{char.classChar}</div>
-          <div className="label">Specie:</div>
-          <div className="text">{char.race.label}</div>
+        <div className="container">
+          <div
+            className="image"
+            style={{ backgroundImage: `url(/images/${char.image})` }}
+          ></div>
+          {char.image}
+          <div className="char-section">
+            <div className="label">Nome:</div>
+            <div className="text">
+              <div>{char.name},</div>
+              <div>{char.title}</div>
+            </div>
+            <div className="label">Classe:</div>
+            <div className="text">{char.classChar}</div>
+            <div className="label">Specie:</div>
+            <div className="text">{char.race}</div>
+          </div>
         </div>
       )}
       {!char.name && (

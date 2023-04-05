@@ -120,17 +120,65 @@ export const preferences = [
 ];
 
 export const races = [
-  { label: "Human" },
-  { label: "Dragonborn" },
-  { label: "Tiefling" },
-  { label: "Dwarf" },
-  { label: "Elf" },
-  { label: "Half-elf" },
-  { label: "Half-Orc" },
-  { label: "Half-Dwarf" },
-  { label: "Aasimar" },
-  { label: "Gnome" },
-  { label: "Halfling" },
-  { label: "Goblin" },
-  { label: "Changeling" },
+  {
+    label: "Human",
+    images: [
+      "human1.jpg",
+      "human2.jpg",
+      "human3.jpg",
+      "human4.jpg",
+      "human5.jpg",
+      "human6.jpg",
+      "human7.jpg",
+      "human7.png",
+    ],
+  },
+  {
+    label: "Dragonborn",
+    images: ["dragonborn1.png", "dragonborn2.png", "dragonborn3.png"],
+  },
+  {
+    label: "Tiefling",
+    images: ["human1.jpg"],
+  },
+  {
+    label: "Dwarf",
+    images: ["dwarf1.jpg"],
+  },
+  {
+    label: "Elf",
+    images: [
+      "elf1.jpg",
+      "elf2.jpg",
+      "elf3.jpg",
+      "elf4.jpg",
+      "elf5.jpg",
+      "elf6.jpg",
+      "elf7.jpg",
+    ],
+  },
+  {
+    label: "Half-elf",
+    images: [
+      "human1.jpg",
+      "human2.jpg",
+      "human3.jpg",
+      "human4.jpg",
+      "human5.jpg",
+      "human6.jpg",
+      "human7.jpg",
+      "human7.png",
+      "halfelf1.jpg",
+      "halfelf2.jpg",
+      "halfelf3.jpg",
+    ],
+  },
+  {
+    label: "Half-Orc",
+    images: ["human1.jpg", "human2.jpg"],
+  },
+  {
+    label: "Gnome",
+    images: ["halfling1.jpg", "halfling2.jpg", "halfelf1.jpg", "halfelf2.jpg"],
+  },
 ];
