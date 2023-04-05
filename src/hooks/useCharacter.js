@@ -5,6 +5,7 @@ import {
   titles,
   preferences,
   races,
+  definitions,
 } from "../constants";
 
 const useCharacter = () => {
@@ -24,7 +25,13 @@ const useCharacter = () => {
   };
 
   const generateClass = () => chooseRandom(classes);
-  const generateTitle = () => chooseRandom(titles);
+  const generateTitle = () => {
+    const title = chooseRandom(titles);
+    if (title.alone) return title.label;
+
+    const definition = chooseRandom(definitions);
+    return `${title.label} ${definition}`;
+  };
   const generatePreference = () => chooseRandom(preferences);
   const generateRace = () => {
     const race = chooseRandom(races);
