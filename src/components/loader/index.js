@@ -1,15 +1,7 @@
-import { ProgressBar } from "react-loader-spinner";
+import { Box } from "@mui/material";
 
 const Loader = () => (
-  <ProgressBar
-    height="80"
-    width="80"
-    ariaLabel="progress-bar-loading"
-    wrapperStyle={{}}
-    wrapperClass="progress-bar-wrapper"
-    borderColor="#063970"
-    barColor="#51E5FF"
-  />
+  <Box>Ma certo! Come abbiamo fatto a non riconoscerti subito?</Box>
 );
 
 export default Loader;

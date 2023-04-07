@@ -6,6 +6,7 @@ import {
   preferences,
   races,
   definitions,
+  levels,
 } from "../constants";
 
 const useCharacter = () => {
@@ -25,6 +26,9 @@ const useCharacter = () => {
   };
 
   const generateClass = () => chooseRandom(classes);
+
+  const generateLevel = () => chooseRandom(levels);
+
   const generateTitle = () => {
     const title = chooseRandom(titles);
     if (title.alone) return title.label;
@@ -32,7 +36,9 @@ const useCharacter = () => {
     const definition = chooseRandom(definitions);
     return `${title.label} ${definition}`;
   };
+
   const generatePreference = () => chooseRandom(preferences);
+  
   const generateRace = () => {
     const race = chooseRandom(races);
     const image = chooseRandom(race.images);
@@ -40,13 +46,15 @@ const useCharacter = () => {
   };
 
   const generateCharacter = (defaultName = "") => {
+    console.log("defaultname", defaultName)
     const name = generateName(defaultName.toLowerCase());
     const title = generateTitle();
     const classChar = generateClass();
     const preference = generatePreference();
+    const level = generateLevel();
     const { race, image } = generateRace();
 
-    return { name, title, classChar, preference, race, image };
+    return { name, title, classChar, preference, race, image, level };
   };
 
   return { generateCharacter };
