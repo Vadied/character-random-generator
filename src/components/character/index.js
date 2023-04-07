@@ -1,28 +1,35 @@
 import "./style.css";
+import { Box } from "@mui/material";
 
 import { useAppState } from "../../contexts/stateContext";
+import Text from "../text";
 
 const CharacterCard = () => {
   const { character } = useAppState();
+  const { classChar, name, title, race, level, image } = character;
 
   return (
-    <div className="info-container">
-      <div
-        className="image"
-        style={{ backgroundImage: `url(/images/${character.image})` }}
-      ></div>
-      <div className="char-section">
-        <div className="label">Nome</div>
-        <div className="text">
-          <div>{character.name},</div>
-          <div>{character.title}</div>
-        </div>
-        <div className="label">Classe</div>
-        <div className="text">{character.classChar}</div>
-        <div className="label">Specie</div>
-        <div className="text">{character.race}</div>
-      </div>
-    </div>
+    <Text>
+      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem", padding: "2rem 1rem" }}>
+        <Box>
+          Tu sei {name}, {title}
+        </Box>
+        <Box
+          sx={{
+            backgroundImage: `url(/portraits/${image})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            height: "10rem",
+            width: "10rem",
+            borderRadius: "50%"
+          }}
+        ></Box>
+        <Box>{classChar}</Box>
+        <Box>
+          {race} di livello {level}
+        </Box>
+      </Box>
+    </Text>
   );
 };
 
