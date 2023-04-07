@@ -1,10 +1,8 @@
 import { Box } from "@mui/material";
 import Navigator from "./components/navigator";
-import { StateProvider, useAppState } from "./contexts/stateContext";
+import { StateProvider } from "./contexts/stateContext";
 
 const App = () => {
-  const { section } = useAppState();
-  console.log("section", section);
   return (
     <StateProvider>
       <Box

@@ -46,7 +46,6 @@ const useCharacter = () => {
   };
 
   const generateCharacter = (defaultName = "") => {
-    console.log("defaultname", defaultName)
     const name = generateName(defaultName.toLowerCase());
     const title = generateTitle();
     const classChar = generateClass();

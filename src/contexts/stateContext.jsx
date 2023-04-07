@@ -10,7 +10,6 @@ export const StateProvider = ({ children }) => {
   const { generateCharacter } = useCharacter();
 
   const generate = (name = "") => {
-    console.log("name", name)
     setLoading(true);
     setTimeout(() => setLoading(false), 1500);
     const newChar = generateCharacter(name);
