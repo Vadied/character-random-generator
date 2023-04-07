@@ -10,7 +10,15 @@ const CharacterCard = () => {
   const { classChar, name, title, race, level, image } = character;
 
   return (
-    <>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-evenly",
+        height: "100%",
+      }}
+    >
       <Text>
         <Box
           sx={{
@@ -33,7 +41,7 @@ const CharacterCard = () => {
               height: "10rem",
               width: "10rem",
               borderRadius: "50%",
-              boxShadow: "0px 0px 10px #4A3550"
+              boxShadow: "0px 0px 10px #4A3550",
             }}
           ></Box>
           <Box>{classChar}</Box>
@@ -47,7 +55,7 @@ const CharacterCard = () => {
           Torna alla Home
         </MyButton>
       </ButtonList>
-    </>
+    </Box>
   );
 };
 
