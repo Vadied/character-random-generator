@@ -6,19 +6,13 @@ import ButtonList from "../buttonList";
 import MyButton from "../button";
 
 const CharacterCard = () => {
-  const { character, setSection } = useAppState();
+  const { character, changeSection } = useAppState();
+  if (!character) return null;
+
   const { classChar, name, title, race, level, image } = character;
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-evenly",
-        height: "100%",
-      }}
-    >
+    <>
       <Text>
         <Box
           sx={{
@@ -51,11 +45,11 @@ const CharacterCard = () => {
         </Box>
       </Text>
       <ButtonList>
-        <MyButton handleClick={() => setSection("welcome")}>
+        <MyButton handleClick={() => changeSection("welcome")}>
           Torna alla Home
         </MyButton>
       </ButtonList>
-    </Box>
+    </>
   );
 };
 

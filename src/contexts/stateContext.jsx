@@ -17,7 +17,17 @@ export const StateProvider = ({ children }) => {
     setSection("character");
   };
 
-  const value = { character, generate, loading, section, setSection };
+  const changeSection = (newSection) => {
+    setSection(newSection);
+  };
+
+  const value = {
+    character,
+    generate,
+    loading,
+    section,
+    changeSection,
+  };
   return (
     <StateContext.Provider value={value}>{children}</StateContext.Provider>
   );

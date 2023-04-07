@@ -1,20 +1,57 @@
 import { Box } from "@mui/material";
 import Text from "../text";
-const Page = ({ children }) => {
+import { useAppState } from "../../contexts/stateContext";
+import Welcome from "../welcome";
+import AskName from "../askName";
+import Nope from "../nope";
+import GetName from "../getName";
+import CharacterCard from "../character";
+import GrowComponent from "../grow";
+import Loader from "../loader";
+
+const Page = () => {
+  const { section, loading} = useAppState();
   return (
-    <>
-      <Text>Benvenutə, avventurierə!</Text>
+    <Box
+      className="page"
+      sx={{
+        backgroundImage: "url('/dice.png')",
+        backgroundSize: "contain",
+        height: "100%",
+        display: "flex",
+        gap: "3rem",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "5rem 2rem",
+        boxSizing: "border-box",
+      }}
+    >
+      {section !== "character" && <Text>Benvenutə, avventurierə!</Text>}
       <Box
         sx={{
           flexGrow: 1,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
         }}
       >
-        {children}
+        <GrowComponent condition={loading}>
+          <Loader />
+        </GrowComponent>
+        <GrowComponent condition={section === "welcome"}>
+          <Welcome />
+        </GrowComponent>
+        <GrowComponent condition={section === "askName"}>
+          <AskName />
+        </GrowComponent>
+        <GrowComponent condition={section === "nope"}>
+          <Nope />
+        </GrowComponent>
+        <GrowComponent condition={section === "getName"}>
+          <GetName />
+        </GrowComponent>
+        <GrowComponent condition={!loading && section === "character"}>
+          <CharacterCard />
+        </GrowComponent>
       </Box>
-    </>
+    </Box>
   );
 };
 
