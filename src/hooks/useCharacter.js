@@ -1,13 +1,7 @@
-import {
-  prefixes,
-  suffixes,
-  classes,
-  titles,
-  preferences,
-  races,
-  definitions,
-  levels,
-} from "../constants";
+import { prefixes, suffixes, classes, preferences, levels } from "../constants";
+
+import races from "../constants/races";
+import { titles, definitions } from "../constants/titles";
 
 const useCharacter = () => {
   const chooseRandom = (content) => {
@@ -38,7 +32,7 @@ const useCharacter = () => {
   };
 
   const generatePreference = () => chooseRandom(preferences);
-  
+
   const generateRace = () => {
     const race = chooseRandom(races);
     const image = chooseRandom(race.images);
