@@ -61,6 +61,9 @@ export const classes = [
   "Warlock",
   "Ranger",
   "Guerriero",
+  "Monaco",
+  "Paladino",
+  "Gunslinger",
 ];
 
 export const levels = [
@@ -167,7 +170,14 @@ export const races = [
   },
   {
     label: "Tiefling",
-    images: ["human1.jpg"],
+    images: [
+      "human1.jpg",
+      "tiefling1.JPG",
+      "tiefling2.JPG",
+      "tiefling3.JPG",
+      "tiefling4.JPG",
+      "tiefling5.JPG",
+    ],
   },
   {
     label: "Dwarf",
@@ -203,10 +213,58 @@ export const races = [
   },
   {
     label: "Half-Orc",
-    images: ["human1.jpg", "human2.jpg"],
+    images: [
+      "human1.jpg",
+      "human2.jpg",
+      "halforc1.jpg",
+      "halforc2.jpg",
+      "halforc3.jpg",
+      "halforc4.jpg",
+  ],
   },
   {
     label: "Gnome",
     images: ["halfling1.jpg", "halfling2.jpg", "halfelf1.jpg", "halfelf2.jpg"],
+  },
+  {
+    label: "Orc"
+    images: [
+      "orc1.jpg",
+      "orc2.jpg",
+      "orc3.jpg",
+      "orc4.jpg",
+      "orc5.jpg",
+      "orc6.jpg",
+  ],
+  },
+  {
+    label: "Aasimar"
+    images: [
+      "aasimar1.JPG",
+      "aasimar2.JPG",
+      "aasimar3.JPG",
+      "aasimar4.JPG",
+      "aasimar5.JPG",
+  ],
+  },
+  {
+    label: "Changeling"
+    images: [
+      "changeling1.JPG",
+      "changeling2.JPG",
+      "changeling3.JPG",
+      "changeling4.JPG",
+      "changeling5.JPG",
+  ],
+  },
+  {
+    label: "Goblin"
+    images: [
+      "goblin1.JPG",
+      "goblin2.JPG",
+      "goblin3.JPG",
+      "goblin4.JPG",
+      "goblin5.JPG",
+  ],
   },
 ];
