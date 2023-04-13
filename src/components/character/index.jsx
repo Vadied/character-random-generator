@@ -1,20 +1,29 @@
+import { useState } from "react";
 import { Box } from "@mui/material";
 
 import { useAppState } from "../../contexts/stateContext";
 import Text from "../text";
 import ButtonList from "../buttonList";
 import MyButton from "../button";
+import SharedList from "../sharedList";
 
 const CharacterCard = () => {
+  const [showShare, setShare] = useState(false);
   const { character, changeSection } = useAppState();
+
   if (!character) return null;
 
   const { classChar, name, title, race, level, image } = character;
+
+  const handleShareClick = () => {
+    setShare(true);
+  };
 
   return (
     <>
       <Text>
         <Box
+          id="lgbt_character"
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -44,11 +53,15 @@ const CharacterCard = () => {
           </Box>
         </Box>
       </Text>
-      <ButtonList>
+      <ButtonList column>
+        <MyButton handleClick={handleShareClick}>
+          Condividi il tuo personaggio!
+        </MyButton>
         <MyButton handleClick={() => changeSection("welcome")}>
           Torna alla Home
         </MyButton>
       </ButtonList>
+      {showShare && <SharedList {...character} />}
     </>
   );
 };
