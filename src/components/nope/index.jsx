@@ -9,7 +9,7 @@ const Nope = () => {
     <>
       <Text>
         Il gioco di ruolo deve essere sempre sano, sicuro e consensuale,
-        speriamo di rivederti preso alla locanda!
+        speriamo di rivederti presto alla locanda!
       </Text>
       <ButtonList>
         <Button handleClick={() => changeSection("welcome")}>
