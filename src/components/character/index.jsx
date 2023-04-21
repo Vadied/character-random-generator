@@ -40,7 +40,7 @@ const CharacterCard = () => {
           ></Box>
           <Box>{classChar}</Box>
           <Box>
-            {race} di livello {level}
+            Di genia {race}, livello {level}
           </Box>
         </Box>
       </Text>
