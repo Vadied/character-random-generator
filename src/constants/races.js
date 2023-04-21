@@ -1,6 +1,6 @@
 const races = [
   {
-    label: "Human",
+    label: "umana",
     images: [
       "human1.jpg",
       "human2.jpg",
@@ -13,11 +13,11 @@ const races = [
     ],
   },
   {
-    label: "Dragonborn",
+    label: "draconica",
     images: ["dragonborn1.png", "dragonborn2.png", "dragonborn3.png"],
   },
   {
-    label: "Tiefling",
+    label: "infernale",
     images: [
       "tiefling1.JPG",
       "tiefling2.JPG",
@@ -27,11 +27,11 @@ const races = [
     ],
   },
   {
-    label: "Dwarf",
+    label: "nanica",
     images: ["dwarf1.jpg"],
   },
   {
-    label: "Elf",
+    label: "elfica",
     images: [
       "elf1.jpg",
       "elf2.jpg",
@@ -43,7 +43,7 @@ const races = [
     ],
   },
   {
-    label: "Half-elf",
+    label: "mezz'elfica",
     images: [
       "human1.jpg",
       "human2.jpg",
@@ -59,15 +59,15 @@ const races = [
     ],
   },
   {
-    label: "Half-Orc",
+    label: "orchesca",
     images: ["halforc1.jpg", "halforc2.jpg", "halforc3.jpg", "halforc4.jpg"],
   },
   {
-    label: "Gnome",
+    label: "gnomica",
     images: ["halfling1.jpg", "halfling2.jpg", "halfelf1.jpg", "halfelf2.jpg"],
   },
   {
-    label: "Orc",
+    label: "orchesca",
     images: [
       "orc1.jpg",
       "orc2.jpg",
@@ -78,7 +78,7 @@ const races = [
     ],
   },
   {
-    label: "Aasimar",
+    label: "angelica",
     images: [
       "aasimar1.JPG",
       "aasimar2.JPG",
@@ -88,7 +88,7 @@ const races = [
     ],
   },
   {
-    label: "Changeling",
+    label: "mutaforma",
     images: [
       "changeling1.JPG",
       "changeling2.JPG",
@@ -98,7 +98,7 @@ const races = [
     ],
   },
   {
-    label: "Goblin",
+    label: "goblinoide",
     images: [
       "goblin1.JPG",
       "goblin2.JPG",
