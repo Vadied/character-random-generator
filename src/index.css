@@ -6,8 +6,8 @@ body,
   font-family: sans-serif;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 740px) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
 }
