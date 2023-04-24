@@ -8,9 +8,12 @@ import GetName from "../getName";
 import CharacterCard from "../character";
 import GrowComponent from "../grow";
 import Loader from "../loader";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Page = () => {
-  const { section, loading} = useAppState();
+  const { section, loading } = useAppState();
+
+  const { width } = useWindowSize();
   return (
     <Box
       className="page"
@@ -24,6 +27,7 @@ const Page = () => {
         alignItems: "center",
         padding: "5rem 2rem",
         boxSizing: "border-box",
+        fontSize: width > 540 ? "16px" : "8px",
       }}
     >
       {section !== "character" && <Text>Benvenutə, avventurierə!</Text>}

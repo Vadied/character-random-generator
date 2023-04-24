@@ -7,6 +7,7 @@ import MyButton from "../button";
 
 const CharacterCard = () => {
   const { character, changeSection } = useAppState();
+
   if (!character) return null;
 
   const { classChar, name, title, race, level, image } = character;
@@ -24,7 +25,7 @@ const CharacterCard = () => {
           }}
         >
           <Box>
-            Tu sei {name}, {title}
+            Tu sei {name}, {title}!
           </Box>
           <Box
             sx={{
@@ -42,6 +43,13 @@ const CharacterCard = () => {
           <Box>
             Di genia {race}, livello {level}
           </Box>
+        </Box>
+      </Text>
+      <Text>
+        <Box>
+          Ora hai tutto il necessario per iniziare la tua avventura: fai uno
+          screen a questa schermata e condividila con #queerantadue e taggando
+          @casarcobaleno!
         </Box>
       </Text>
       <ButtonList>
